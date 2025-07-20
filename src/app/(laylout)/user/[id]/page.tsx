@@ -1,18 +1,18 @@
 import UserDetails from '@/components/user-detail/UserDetails';
-import React, { FC } from 'react';
+import React from 'react'
 
-type PageProps = {
-  params: { id: string }
-}
+const UserDetailPage = async ({ params }: { params: { id: string } }) => {
+  const id = params.id; 
+  const res = await fetch(`https://dummyjson.com/users/${id}`);
+  const user = await res.json();
+  console.log(user);
+  
 
- const RecipeDetail: FC<PageProps> = async ({ params })=> {
-  const id = await params.id
-    const data = await fetch(`https://dummyjson.com/users/${id}`, { cache: "force-cache" });
-    const user = await data.json();
   return (
     <div>
       <UserDetails data={user}/>
     </div>
-  );
+  )
 }
-export default RecipeDetail
+
+export default UserDetailPage;
