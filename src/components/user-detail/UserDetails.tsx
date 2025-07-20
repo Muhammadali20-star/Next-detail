@@ -23,7 +23,7 @@ const UserDetails: FC<UserProps> = ({ data }) => {
           <p>Location: <span className="text-gray-200">{data.address?.city}, {data.address?.state}</span></p>
         </div>
 
-        <button onClick={()=> router.push("/user")} className="mt-2 bg-purple-600 hover:bg-purple-700 text-white text-sm px-5 py-2 rounded-full font-semibold shadow-md hover:shadow-lg transition"> View Profile</button>
+        <button onClick={()=> router.push("/user")} className="mt-2 bg-purple-600 hover:bg-purple-700 text-white text-sm px-5 py-2 rounded-full font-semibold shadow-md hover:shadow-lg transition">Back to Users</button>
       </div>
     </div>
   )
