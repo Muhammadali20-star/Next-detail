@@ -6,7 +6,6 @@ const UserDetailPage = async (props: { params: Promise<{ id: string }> }) => {
   const id = params.id;
   const res = await fetch(`https://dummyjson.com/users/${id}`);
   const user = await res.json();
-  console.log(user);
 
 
   return (
